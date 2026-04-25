@@ -16,18 +16,20 @@ body {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
-/* BOTÓN MEJORADO */
+/* BOTÓN */
 button {
+    margin-bottom: 100px;
+
     padding: 40px 90px;
     font-size: 45px;
-    background: linear-gradient(45deg, gold, #ffd700);
+    background: #9C966D; /* 👈 COLOR SÓLIDO */
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    color: black;
+    color: white;
     font-weight: bold;
 
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
@@ -37,7 +39,23 @@ button {
 /* EFECTO HOVER */
 button:hover {
     transform: scale(1.1);
-    background: linear-gradient(45deg, #ffd700, gold);
+    background: #E5A4C4; /* 👈 UN TONO MÁS OSCURO */
+}
+
+/* EFECTO ENTRADA */
+button {
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 </head>
@@ -65,7 +83,7 @@ function entrar() {
     const audio = document.getElementById("musica");
     audio.play();
 
-    window.open("https://fainvitaciones.com/alexa-kristell-xv", "_blank");
+    window.open("https://https://fainvitaciones.com/alexa-kristell-xv", "_blank");
 }
 </script>
 
